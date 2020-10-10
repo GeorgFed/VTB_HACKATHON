@@ -74,14 +74,21 @@ class CameraVC: UIViewController {
     
     @objc func didTapCameraView() {
         let settings = AVCapturePhotoSettings()
-        // let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        // let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType, kCVPixelBufferWidthKey as String: 160, kCVPixelBufferHeightKey as String: 160]
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
-        
         // cameraOutput.capturePhoto(with: settings, delegate: self)
+        
+        performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is PopupVC {
+            let vc = segue.destination as? PopupVC
+            // MARK: - PASS IMAGE
+        }
     }
 }
 
+/*
 extension CameraVC: AVCapturePhotoCaptureDelegate {
     // MARK: - ERROR!!!
     func photoOutput(_ output: AVCapturePhotoOutput,
@@ -98,3 +105,4 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
     }
 
 }
+*/

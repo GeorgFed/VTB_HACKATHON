@@ -7,6 +7,30 @@
 
 import UIKit
 
+enum CredentialType: Int {
+    case name = 0
+    case email = 1
+    case phoneNumber = 2
+    case birthdate = 3
+    case gender = 4
+    case passport = 5
+    case birthplace = 6
+    case brand = 7
+    case carprice = 8
+    case creditcost = -1
+    case creditduration = 9
+    case creditpercent = 10
+}
+
+struct Identifier {
+    public static let inputCell = "inputCell"
+    public static let buttonCell = "buttonCell"
+    public static let sliderCell = "sliderCell"
+    
+    public static let toPopupVC = "toPopupVC"
+    public static let toCreditRequestVC = "toCreditRequestVC"
+}
+
 // MARK: - App color scheme
 extension UIColor {
     static var primary: UIColor {
@@ -19,7 +43,7 @@ extension UIColor {
         return UIColor.systemFill
     }
     static var button: UIColor {
-        return .systemPink
+        return .systemBlue
     }
 }
 
