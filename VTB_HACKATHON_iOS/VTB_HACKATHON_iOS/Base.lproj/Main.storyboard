@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="U7T-ta-gEs">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="Mii-0M-ZkR" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="Mii-0M-ZkR" customClass="ProfileVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XAo-Tj-KKh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +87,7 @@
                         <sections>
                             <tableViewSection id="V7n-5J-HZd">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="D0Z-RJ-TqX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="64" id="D0Z-RJ-TqX">
                                         <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0Z-RJ-TqX" id="f7S-0Y-wOy">
@@ -266,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="138" y="826"/>
         </scene>
-        <!--Table View Controller-->
+        <!--HistoryVC-->
         <scene sceneID="36u-4Z-cBF">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="sgA-Vy-jkK" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="sgA-Vy-jkK" customClass="HistoryVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gxU-Y0-7jH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,10 +360,10 @@
             </objects>
             <point key="canvasLocation" x="940.57971014492762" y="825.66964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="Wle-cu-mEI">
             <objects>
-                <viewController id="Kfq-nI-8EK" sceneMemberID="viewController">
+                <viewController id="Kfq-nI-8EK" customClass="SignInVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xXJ-SL-inZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -760,10 +761,10 @@
             </objects>
             <point key="canvasLocation" x="1771.0144927536232" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="Udx-Ta-RfB">
             <objects>
-                <viewController id="an0-VI-6Hs" sceneMemberID="viewController">
+                <viewController id="an0-VI-6Hs" customClass="SignUpVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h9f-Pp-pbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -781,7 +782,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-a2-S5L" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-a2-S5L" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="342" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="64R-kU-EEx"/>
@@ -847,6 +848,7 @@
                         <constraints>
                             <constraint firstItem="wT8-Cl-PVx" firstAttribute="top" secondItem="Gfq-e0-a0O" secondAttribute="bottom" constant="16" id="0Zs-9b-Dno"/>
                             <constraint firstItem="8D7-8I-Wie" firstAttribute="trailing" secondItem="hfk-xn-wsW" secondAttribute="trailing" constant="16" id="0bc-Ta-2JX"/>
+                            <constraint firstItem="dCo-a2-S5L" firstAttribute="leading" secondItem="8D7-8I-Wie" secondAttribute="leading" constant="16" id="4bP-QC-R5D"/>
                             <constraint firstItem="Gfq-e0-a0O" firstAttribute="top" secondItem="dCo-a2-S5L" secondAttribute="bottom" constant="16" id="748-ey-ct7"/>
                             <constraint firstItem="6N0-JF-Adi" firstAttribute="top" secondItem="wT8-Cl-PVx" secondAttribute="bottom" constant="16" id="7B5-5F-njw"/>
                             <constraint firstItem="vkY-wR-RJD" firstAttribute="centerY" secondItem="Gfq-e0-a0O" secondAttribute="centerY" id="B0i-Rn-CD0"/>
@@ -860,6 +862,7 @@
                             <constraint firstItem="hfk-xn-wsW" firstAttribute="centerY" secondItem="dCo-a2-S5L" secondAttribute="centerY" id="WiU-vS-AHp"/>
                             <constraint firstItem="wT8-Cl-PVx" firstAttribute="leading" secondItem="8D7-8I-Wie" secondAttribute="leading" constant="16" id="cQO-UR-xcF"/>
                             <constraint firstItem="8D7-8I-Wie" firstAttribute="trailing" secondItem="gJh-Jf-nhw" secondAttribute="trailing" constant="16" id="cR1-WR-Rbk"/>
+                            <constraint firstItem="8D7-8I-Wie" firstAttribute="trailing" secondItem="dCo-a2-S5L" secondAttribute="trailing" constant="16" id="gtt-4M-KbS"/>
                             <constraint firstItem="8D7-8I-Wie" firstAttribute="trailing" secondItem="vkY-wR-RJD" secondAttribute="trailing" constant="16" id="hoV-WR-w8S"/>
                             <constraint firstItem="gJh-Jf-nhw" firstAttribute="centerY" secondItem="wT8-Cl-PVx" secondAttribute="centerY" id="mIX-0A-Yf6"/>
                             <constraint firstItem="8D7-8I-Wie" firstAttribute="trailing" secondItem="Gfq-e0-a0O" secondAttribute="trailing" constant="16" id="pFd-Bf-6a7"/>
@@ -870,10 +873,795 @@
             </objects>
             <point key="canvasLocation" x="941" y="1525"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ifM-fO-lnq">
+            <objects>
+                <tableViewController id="ILa-4Q-y5B" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RdE-DS-JDg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="ufc-Zv-ooc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="UXz-ea-XPa">
+                                        <rect key="frame" x="0.0" y="18" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXz-ea-XPa" id="OyC-RE-NjM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оформление кредита" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWE-pY-pOl">
+                                                    <rect key="frame" x="20" y="21.5" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mB-IU-UyX">
+                                                    <rect key="frame" x="370" y="20" width="24" height="24"/>
+                                                    <state key="normal" image="Сlose"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OWE-pY-pOl" firstAttribute="leading" secondItem="OyC-RE-NjM" secondAttribute="leadingMargin" id="GER-JQ-4Si"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9mB-IU-UyX" secondAttribute="trailing" id="ghl-y8-bjy"/>
+                                                <constraint firstItem="9mB-IU-UyX" firstAttribute="centerY" secondItem="OyC-RE-NjM" secondAttribute="centerY" id="jFg-rD-NTH"/>
+                                                <constraint firstItem="OWE-pY-pOl" firstAttribute="centerY" secondItem="OyC-RE-NjM" secondAttribute="centerY" id="kaC-EF-gqV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Личные данные" id="gVf-RI-9hC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="1Yx-fR-36U" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="138" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Yx-fR-36U" id="vxQ-Fr-OtP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ФИО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0s-mU-SUE" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="YDW-L3-OAd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="a03-Ag-mOb">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="YmK-W0-d62"/>
+                                                        <constraint firstAttribute="width" constant="16" id="cPT-Ab-zTr"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="a03-Ag-mOb" secondAttribute="trailing" constant="16" id="Dwr-Ck-KCa"/>
+                                                <constraint firstItem="T0s-mU-SUE" firstAttribute="leading" secondItem="vxQ-Fr-OtP" secondAttribute="leadingMargin" id="IUf-vJ-9be"/>
+                                                <constraint firstItem="T0s-mU-SUE" firstAttribute="trailing" secondItem="vxQ-Fr-OtP" secondAttribute="trailingMargin" id="K1K-0P-sOj"/>
+                                                <constraint firstItem="T0s-mU-SUE" firstAttribute="top" secondItem="vxQ-Fr-OtP" secondAttribute="topMargin" constant="4" id="kbk-Hd-wyd"/>
+                                                <constraint firstItem="a03-Ag-mOb" firstAttribute="centerY" secondItem="T0s-mU-SUE" secondAttribute="centerY" id="p3e-mZ-Vco"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="T0s-mU-SUE" id="Bxo-y6-o2s"/>
+                                            <outlet property="inputImage" destination="a03-Ag-mOb" id="f1k-Cd-6Z9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="qQk-Uh-Ms8" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qQk-Uh-Ms8" id="DGQ-c6-3ot">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Дата рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-8v-tyB" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="mVO-ej-mKg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date" translatesAutoresizingMaskIntoConstraints="NO" id="kCV-gG-CvE">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="9XA-43-g9c"/>
+                                                        <constraint firstAttribute="height" constant="16" id="Y2j-ZZ-D6f"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kCV-gG-CvE" firstAttribute="centerY" secondItem="VbS-8v-tyB" secondAttribute="centerY" id="0wt-cL-3n1"/>
+                                                <constraint firstItem="VbS-8v-tyB" firstAttribute="leading" secondItem="DGQ-c6-3ot" secondAttribute="leadingMargin" id="2Z3-6J-qca"/>
+                                                <constraint firstItem="VbS-8v-tyB" firstAttribute="top" secondItem="DGQ-c6-3ot" secondAttribute="topMargin" constant="4" id="QzO-o4-Q8j"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kCV-gG-CvE" secondAttribute="trailing" constant="16" id="tHU-4F-Cnf"/>
+                                                <constraint firstItem="VbS-8v-tyB" firstAttribute="trailing" secondItem="DGQ-c6-3ot" secondAttribute="trailingMargin" id="vvI-EE-Tn0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="VbS-8v-tyB" id="cE6-J0-GHP"/>
+                                            <outlet property="inputImage" destination="kCV-gG-CvE" id="I9O-Kn-NG5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="BxZ-Z6-v2d" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="282" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BxZ-Z6-v2d" id="aG3-Ld-GzA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Место рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-Ma-WgK" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="bpB-EF-pdK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Globe" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-z4-Z0L">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="xhl-Si-4eO"/>
+                                                        <constraint firstAttribute="width" constant="16" id="zvl-He-0Fi"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0bh-z4-Z0L" firstAttribute="centerY" secondItem="RkE-Ma-WgK" secondAttribute="centerY" id="3bI-gy-CPU"/>
+                                                <constraint firstItem="RkE-Ma-WgK" firstAttribute="leading" secondItem="aG3-Ld-GzA" secondAttribute="leadingMargin" id="4TU-ec-oJN"/>
+                                                <constraint firstItem="RkE-Ma-WgK" firstAttribute="trailing" secondItem="aG3-Ld-GzA" secondAttribute="trailingMargin" id="IRq-8u-17U"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0bh-z4-Z0L" secondAttribute="trailing" constant="16" id="KeA-wo-9vo"/>
+                                                <constraint firstItem="RkE-Ma-WgK" firstAttribute="top" secondItem="aG3-Ld-GzA" secondAttribute="topMargin" constant="4" id="RaP-ON-qm5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="RkE-Ma-WgK" id="B5k-3G-zV0"/>
+                                            <outlet property="inputImage" destination="0bh-z4-Z0L" id="c9C-Dy-hV0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="4Fr-qe-8NM" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Fr-qe-8NM" id="k5y-NO-1m1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пол" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1z-Pt-Zab" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="bvl-HN-vtT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group of persons" translatesAutoresizingMaskIntoConstraints="NO" id="ADu-1S-5z6">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="4AQ-Hq-CdZ"/>
+                                                        <constraint firstAttribute="height" constant="16" id="XyL-yp-RKh"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h1z-Pt-Zab" firstAttribute="trailing" secondItem="k5y-NO-1m1" secondAttribute="trailingMargin" id="4ER-TC-atF"/>
+                                                <constraint firstItem="h1z-Pt-Zab" firstAttribute="leading" secondItem="k5y-NO-1m1" secondAttribute="leadingMargin" id="9kb-or-byk"/>
+                                                <constraint firstItem="ADu-1S-5z6" firstAttribute="centerY" secondItem="h1z-Pt-Zab" secondAttribute="centerY" id="Oqq-p2-Hc2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ADu-1S-5z6" secondAttribute="trailing" constant="16" id="Tis-J9-GBX"/>
+                                                <constraint firstItem="h1z-Pt-Zab" firstAttribute="top" secondItem="k5y-NO-1m1" secondAttribute="topMargin" constant="4" id="bTF-dG-9uB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="h1z-Pt-Zab" id="Ezz-bH-v4w"/>
+                                            <outlet property="inputImage" destination="ADu-1S-5z6" id="pQ9-9y-QZ2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Контакты" id="8Nw-DD-99d">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="lca-9K-cS4" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="482" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lca-9K-cS4" id="NuK-WD-scn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-Y0-sgt" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="m1U-80-gRf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="Act-P6-1xI">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="PQB-Rb-zGd"/>
+                                                        <constraint firstAttribute="height" constant="16" id="WoH-jQ-dP0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aDn-Y0-sgt" firstAttribute="trailing" secondItem="NuK-WD-scn" secondAttribute="trailingMargin" id="FYd-Ny-N1w"/>
+                                                <constraint firstItem="aDn-Y0-sgt" firstAttribute="leading" secondItem="NuK-WD-scn" secondAttribute="leadingMargin" id="HKe-5l-Maf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Act-P6-1xI" secondAttribute="trailing" constant="16" id="eHp-Dh-XlF"/>
+                                                <constraint firstItem="Act-P6-1xI" firstAttribute="centerY" secondItem="aDn-Y0-sgt" secondAttribute="centerY" id="fGs-eC-kUx"/>
+                                                <constraint firstItem="aDn-Y0-sgt" firstAttribute="top" secondItem="NuK-WD-scn" secondAttribute="topMargin" constant="4" id="qRW-Ap-z54"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="aDn-Y0-sgt" id="xdx-SB-gpD"/>
+                                            <outlet property="inputImage" destination="Act-P6-1xI" id="O5u-aq-CJH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="obE-5P-peh" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="554" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obE-5P-peh" id="Ebr-3W-XjK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGA-VC-c7n" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="t6y-7s-u9D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone" translatesAutoresizingMaskIntoConstraints="NO" id="4W5-jj-Rg2">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="h2h-35-pPL"/>
+                                                        <constraint firstAttribute="width" constant="16" id="npL-Ao-wZT"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4W5-jj-Rg2" firstAttribute="centerY" secondItem="oGA-VC-c7n" secondAttribute="centerY" id="4X9-s8-rRq"/>
+                                                <constraint firstItem="oGA-VC-c7n" firstAttribute="trailing" secondItem="Ebr-3W-XjK" secondAttribute="trailingMargin" id="AiU-em-wZG"/>
+                                                <constraint firstItem="oGA-VC-c7n" firstAttribute="top" secondItem="Ebr-3W-XjK" secondAttribute="topMargin" constant="4" id="GbI-eO-0Il"/>
+                                                <constraint firstItem="oGA-VC-c7n" firstAttribute="leading" secondItem="Ebr-3W-XjK" secondAttribute="leadingMargin" id="QtM-1z-xJq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4W5-jj-Rg2" secondAttribute="trailing" constant="16" id="g0b-3p-JNB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="oGA-VC-c7n" id="8HA-y1-s0M"/>
+                                            <outlet property="inputImage" destination="4W5-jj-Rg2" id="vKR-7S-fSC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="q5m-5c-viX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="0Y9-yF-ZZV" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="662" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Y9-yF-ZZV" id="oaU-Ua-H3V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-ON-8gM">
+                                                    <rect key="frame" x="20" y="12" width="374" height="48"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="AaW-lQ-pJ9"/>
+                                                    </constraints>
+                                                    <state key="normal" title="ОФОРМЛЕНИЕ КРЕДИТА (2/2)">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Woy-ON-8gM" firstAttribute="leading" secondItem="oaU-Ua-H3V" secondAttribute="leadingMargin" id="GXO-bY-wzb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Woy-ON-8gM" secondAttribute="trailing" id="a3p-Lv-iMH"/>
+                                                <constraint firstItem="Woy-ON-8gM" firstAttribute="centerY" secondItem="oaU-Ua-H3V" secondAttribute="centerY" id="oyj-tT-Nqs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ILa-4Q-y5B" id="dVc-X4-XRd"/>
+                            <outlet property="delegate" destination="ILa-4Q-y5B" id="fok-mJ-AL9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb9-6M-cli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3545" y="94"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="B1L-Sd-NwG">
+            <objects>
+                <tableViewController id="EIw-Q6-zaw" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fDW-V6-P0g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="WDo-Tt-OQt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="kfB-gh-6Xv">
+                                        <rect key="frame" x="0.0" y="18" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kfB-gh-6Xv" id="ksx-pa-lTz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оформление кредита" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9Y-oR-dqc">
+                                                    <rect key="frame" x="20" y="21.5" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-Kv-cGh">
+                                                    <rect key="frame" x="370" y="20" width="24" height="24"/>
+                                                    <state key="normal" image="Сlose"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k9Y-oR-dqc" firstAttribute="leading" secondItem="ksx-pa-lTz" secondAttribute="leadingMargin" id="Ar3-Kl-cbY"/>
+                                                <constraint firstItem="hb0-Kv-cGh" firstAttribute="centerY" secondItem="ksx-pa-lTz" secondAttribute="centerY" id="ahh-Ax-Iav"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hb0-Kv-cGh" secondAttribute="trailing" id="mmd-k0-bxo"/>
+                                                <constraint firstItem="k9Y-oR-dqc" firstAttribute="centerY" secondItem="ksx-pa-lTz" secondAttribute="centerY" id="s0D-9s-17b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Автомобиль" id="TBa-6E-ReG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="Mju-gz-Brs" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="138" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mju-gz-Brs" id="WpE-Fe-XAc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Марка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-jh-8Nu" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="zR1-ut-wGc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="XgL-kK-4X0">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="7U5-5d-gwb"/>
+                                                        <constraint firstAttribute="height" constant="16" id="Rdc-6w-DsZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KuL-jh-8Nu" firstAttribute="trailing" secondItem="WpE-Fe-XAc" secondAttribute="trailingMargin" id="PHZ-IL-i6p"/>
+                                                <constraint firstItem="KuL-jh-8Nu" firstAttribute="top" secondItem="WpE-Fe-XAc" secondAttribute="topMargin" constant="4" id="Rsa-rO-0pP"/>
+                                                <constraint firstItem="XgL-kK-4X0" firstAttribute="centerY" secondItem="KuL-jh-8Nu" secondAttribute="centerY" id="aKm-Li-E6A"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XgL-kK-4X0" secondAttribute="trailing" constant="16" id="bHE-lC-b4p"/>
+                                                <constraint firstItem="KuL-jh-8Nu" firstAttribute="leading" secondItem="WpE-Fe-XAc" secondAttribute="leadingMargin" id="xQw-jI-0kW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="KuL-jh-8Nu" id="Fde-j6-2sK"/>
+                                            <outlet property="inputImage" destination="XgL-kK-4X0" id="cno-VM-4UG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="LfG-kN-9cv" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LfG-kN-9cv" id="a72-ea-jo4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Стоимость" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-Qa-chD" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="VGp-FU-ZKh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-6G-UJW">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="NYe-HW-A4R"/>
+                                                        <constraint firstAttribute="width" constant="16" id="bJL-g7-qFb"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dhO-6G-UJW" secondAttribute="trailing" constant="16" id="89D-R6-4hY"/>
+                                                <constraint firstItem="oe3-Qa-chD" firstAttribute="leading" secondItem="a72-ea-jo4" secondAttribute="leadingMargin" id="NcJ-02-4zY"/>
+                                                <constraint firstItem="oe3-Qa-chD" firstAttribute="trailing" secondItem="a72-ea-jo4" secondAttribute="trailingMargin" id="YiP-ey-fZa"/>
+                                                <constraint firstItem="dhO-6G-UJW" firstAttribute="centerY" secondItem="oe3-Qa-chD" secondAttribute="centerY" id="eqO-fy-EO4"/>
+                                                <constraint firstItem="oe3-Qa-chD" firstAttribute="top" secondItem="a72-ea-jo4" secondAttribute="topMargin" constant="4" id="k5q-pt-Kbn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="oe3-Qa-chD" id="0UZ-SA-KpO"/>
+                                            <outlet property="inputImage" destination="dhO-6G-UJW" id="cNl-Xp-QhI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Кредит" id="efu-hf-lWD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="cNu-mf-Kek" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="338" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cNu-mf-Kek" id="7D8-pb-tgC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiJ-Zx-5pC">
+                                                    <rect key="frame" x="202.5" y="8.5" width="9" height="18.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="USu-OE-ymQ">
+                                                    <rect key="frame" x="18" y="31" width="378" height="31"/>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="USu-OE-ymQ" firstAttribute="leading" secondItem="7D8-pb-tgC" secondAttribute="leadingMargin" id="TsE-xy-mcQ"/>
+                                                <constraint firstItem="USu-OE-ymQ" firstAttribute="top" secondItem="iiJ-Zx-5pC" secondAttribute="bottom" constant="4" id="WFo-Zn-Qw9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="USu-OE-ymQ" secondAttribute="trailing" id="XX2-zt-JWU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="USu-OE-ymQ" secondAttribute="bottom" id="d9W-5y-V3t"/>
+                                                <constraint firstItem="iiJ-Zx-5pC" firstAttribute="centerX" secondItem="7D8-pb-tgC" secondAttribute="centerX" id="mJL-Es-fd5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Условия" id="X0Q-Ld-mZx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="gKF-9l-fnb" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="466" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gKF-9l-fnb" id="owE-tm-L5W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Срок кредитования" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgd-nG-ZJS" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="G7U-8Z-swR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date" translatesAutoresizingMaskIntoConstraints="NO" id="tDD-K7-7oz">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="JP7-fu-U0A"/>
+                                                        <constraint firstAttribute="height" constant="16" id="wRz-sm-fRu"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sgd-nG-ZJS" firstAttribute="top" secondItem="owE-tm-L5W" secondAttribute="topMargin" constant="4" id="9zN-gG-krq"/>
+                                                <constraint firstItem="tDD-K7-7oz" firstAttribute="centerY" secondItem="Sgd-nG-ZJS" secondAttribute="centerY" id="A7h-vh-ysi"/>
+                                                <constraint firstItem="Sgd-nG-ZJS" firstAttribute="leading" secondItem="owE-tm-L5W" secondAttribute="leadingMargin" id="Fff-VX-oxW"/>
+                                                <constraint firstItem="Sgd-nG-ZJS" firstAttribute="trailing" secondItem="owE-tm-L5W" secondAttribute="trailingMargin" id="Ig2-Rv-HR8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tDD-K7-7oz" secondAttribute="trailing" constant="16" id="fF9-SB-YE9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="Sgd-nG-ZJS" id="rgt-h4-uWO"/>
+                                            <outlet property="inputImage" destination="tDD-K7-7oz" id="f0b-eB-NAC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="4LU-bB-s4j" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="538" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4LU-bB-s4j" id="y7q-eb-vH5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Срок кредитования" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tir-C5-8eM" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="EdL-a0-40b"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Date" translatesAutoresizingMaskIntoConstraints="NO" id="3tK-8K-q7j">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="aCD-7X-Pbo"/>
+                                                        <constraint firstAttribute="width" constant="16" id="kdk-jl-UCT"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3tK-8K-q7j" secondAttribute="trailing" constant="16" id="2RY-BS-5ua"/>
+                                                <constraint firstItem="tir-C5-8eM" firstAttribute="trailing" secondItem="y7q-eb-vH5" secondAttribute="trailingMargin" id="WIX-N5-hLh"/>
+                                                <constraint firstItem="3tK-8K-q7j" firstAttribute="centerY" secondItem="tir-C5-8eM" secondAttribute="centerY" id="ad0-ph-6g8"/>
+                                                <constraint firstItem="tir-C5-8eM" firstAttribute="top" secondItem="y7q-eb-vH5" secondAttribute="topMargin" constant="4" id="fBU-Gt-I6w"/>
+                                                <constraint firstItem="tir-C5-8eM" firstAttribute="leading" secondItem="y7q-eb-vH5" secondAttribute="leadingMargin" id="iKr-ZA-8Ge"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputField" destination="tir-C5-8eM" id="bB1-cJ-MQf"/>
+                                            <outlet property="inputImage" destination="3tK-8K-q7j" id="0Kk-mv-oxk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="5tL-jc-JCZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="nVr-FJ-kfy" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="650" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nVr-FJ-kfy" id="VSa-Gf-vXP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpo-8F-9GY">
+                                                    <rect key="frame" x="20" y="12" width="374" height="48"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Gbe-TH-ViN"/>
+                                                    </constraints>
+                                                    <state key="normal" title="ОФОРМЛЕНИЕ КРЕДИТА (1/2)">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bpo-8F-9GY" secondAttribute="trailing" id="DPZ-o4-aUH"/>
+                                                <constraint firstItem="Bpo-8F-9GY" firstAttribute="centerY" secondItem="VSa-Gf-vXP" secondAttribute="centerY" id="NRG-sI-psW"/>
+                                                <constraint firstItem="Bpo-8F-9GY" firstAttribute="leading" secondItem="VSa-Gf-vXP" secondAttribute="leadingMargin" id="yNB-y8-A7U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EIw-Q6-zaw" id="nwe-T2-scg"/>
+                            <outlet property="delegate" destination="EIw-Q6-zaw" id="9ij-Dz-zLU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6g-UF-OFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2760.8695652173915" y="93.75"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="Gfq-e0-a0O">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+        <designable name="KuL-jh-8Nu">
+            <size key="intrinsicContentSize" width="43.5" height="18.5"/>
+        </designable>
+        <designable name="RkE-Ma-WgK">
+            <size key="intrinsicContentSize" width="114" height="18.5"/>
+        </designable>
+        <designable name="Sgd-nG-ZJS">
+            <size key="intrinsicContentSize" width="133" height="18.5"/>
+        </designable>
+        <designable name="T0s-mU-SUE">
+            <size key="intrinsicContentSize" width="33" height="18.5"/>
         </designable>
         <designable name="TFz-lR-7Nn">
             <size key="intrinsicContentSize" width="33" height="18.5"/>
@@ -881,11 +1669,29 @@
         <designable name="UNz-cK-F06">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
+        <designable name="VbS-8v-tyB">
+            <size key="intrinsicContentSize" width="104" height="18.5"/>
+        </designable>
         <designable name="ViX-pu-fPd">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
+        <designable name="aDn-Y0-sgt">
+            <size key="intrinsicContentSize" width="34.5" height="18.5"/>
+        </designable>
         <designable name="dCo-a2-S5L">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+        <designable name="h1z-Pt-Zab">
+            <size key="intrinsicContentSize" width="26.5" height="18.5"/>
+        </designable>
+        <designable name="oGA-VC-c7n">
+            <size key="intrinsicContentSize" width="58.5" height="18.5"/>
+        </designable>
+        <designable name="oe3-Qa-chD">
+            <size key="intrinsicContentSize" width="73.5" height="18.5"/>
+        </designable>
+        <designable name="tir-C5-8eM">
+            <size key="intrinsicContentSize" width="133" height="18.5"/>
         </designable>
         <designable name="wT8-Cl-PVx">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
@@ -893,16 +1699,23 @@
     </designables>
     <resources>
         <image name="Close Popup" width="35" height="35"/>
+        <image name="Date" width="16" height="19"/>
         <image name="Document" width="16" height="18"/>
         <image name="Email" width="18" height="17"/>
         <image name="Exit" width="11" height="11"/>
+        <image name="Globe" width="18" height="18"/>
+        <image name="Group of persons" width="20" height="18"/>
         <image name="History" width="24" height="24"/>
         <image name="Password" width="18" height="19"/>
         <image name="Person" width="16" height="18"/>
+        <image name="Phone" width="19" height="21"/>
         <image name="Profile Image" width="108" height="108"/>
         <image name="SnapButton" width="56" height="56"/>
         <image name="White Person" width="21" height="24"/>
         <image name="Сlose" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

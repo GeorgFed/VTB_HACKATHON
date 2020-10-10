@@ -29,6 +29,10 @@
 		567FA5922531F6F5004611CD /* CreditRequestVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */; };
 		567FA5952531FBAF004611CD /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5942531FBAF004611CD /* HideKeyboard.swift */; };
 		567FA5982532201D004611CD /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5972532201C004611CD /* SliderCell.swift */; };
+		567FA59B25326454004611CD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA59A25326453004611CD /* ProfileVC.swift */; };
+		567FA59E25326476004611CD /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA59D25326476004611CD /* HistoryVC.swift */; };
+		567FA5A1253264C7004611CD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5A0253264C7004611CD /* SignInVC.swift */; };
+		567FA5A4253264F7004611CD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5A3253264F7004611CD /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditRequestVC+UI.swift"; sourceTree = "<group>"; };
 		567FA5942531FBAF004611CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		567FA5972532201C004611CD /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		567FA59A25326453004611CD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		567FA59D25326476004611CD /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		567FA5A0253264C7004611CD /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		567FA5A3253264F7004611CD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,10 @@
 				567FA5722531E0BA004611CD /* PopupVC+UI.swift */,
 				567FA5612531D661004611CD /* CreditRequestVC.swift */,
 				567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */,
+				567FA59A25326453004611CD /* ProfileVC.swift */,
+				567FA59D25326476004611CD /* HistoryVC.swift */,
+				567FA5A0253264C7004611CD /* SignInVC.swift */,
+				567FA5A3253264F7004611CD /* SignUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,16 +253,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567FA59B25326454004611CD /* ProfileVC.swift in Sources */,
 				567FA5982532201D004611CD /* SliderCell.swift in Sources */,
 				567FA56D2531E043004611CD /* InputCell.swift in Sources */,
 				567FA58F2531ED42004611CD /* CustomView.swift in Sources */,
+				567FA5A1253264C7004611CD /* SignInVC.swift in Sources */,
 				567FA5732531E0BA004611CD /* PopupVC+UI.swift in Sources */,
 				567FA5922531F6F5004611CD /* CreditRequestVC+UI.swift in Sources */,
 				567FA549253128A4004611CD /* Constants.swift in Sources */,
+				567FA59E25326476004611CD /* HistoryVC.swift in Sources */,
 				567FA5252530985A004611CD /* AppDelegate.swift in Sources */,
 				567FA5682531D950004611CD /* InputField.swift in Sources */,
 				567FA55C2531D5A0004611CD /* User.swift in Sources */,
 				567FA5272530985B004611CD /* SceneDelegate.swift in Sources */,
+				567FA5A4253264F7004611CD /* SignUpVC.swift in Sources */,
 				567FA5882531ECA0004611CD /* ImageViewExtension.swift in Sources */,
 				567FA5592531409E004611CD /* PopupVC.swift in Sources */,
 				567FA5852531E6A8004611CD /* Credential.swift in Sources */,
