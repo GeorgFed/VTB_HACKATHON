@@ -46,7 +46,7 @@ class CreditDetailsVC: UITableViewController {
     }
     
     @IBAction func sliderHasChanged(_ sender: UISlider) {
-        creditsum.text = "\(Int(sender.value))"
+        creditsum.text = "\(Int(sender.value * 100000))"
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -115,7 +115,7 @@ extension CreditDetailsVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 2 && textField.text != "" {
-            slider.setValue(Float(textField.text!)!, animated: true)
+            slider.setValue(Float(Int(textField.text!)! / 100000), animated: true)
         }
         validate()
         if textField.text != "" {

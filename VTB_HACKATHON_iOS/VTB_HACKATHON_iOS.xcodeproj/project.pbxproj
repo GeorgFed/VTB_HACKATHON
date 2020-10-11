@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		561576FA2532A9EC003BC7FB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561576F92532A9EC003BC7FB /* StringExtension.swift */; };
+		561577002532CB5B003BC7FB /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561576FF2532CB5B003BC7FB /* HeaderCell.swift */; };
+		561577032532CB75003BC7FB /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561577022532CB75003BC7FB /* HistoryCell.swift */; };
+		561577062532CCFA003BC7FB /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561577052532CCFA003BC7FB /* DataSource.swift */; };
+		561577092532CE98003BC7FB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561577082532CE98003BC7FB /* Data.swift */; };
 		56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E222532777A00619CF6 /* CreditDetailsVC.swift */; };
 		56196E262532779D00619CF6 /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E252532779D00619CF6 /* PersonalDataVC.swift */; };
 		56196E2925327CFC00619CF6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E2825327CFC00619CF6 /* Validation.swift */; };
@@ -34,10 +38,15 @@
 		567FA59E25326476004611CD /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA59D25326476004611CD /* HistoryVC.swift */; };
 		567FA5A1253264C7004611CD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5A0253264C7004611CD /* SignInVC.swift */; };
 		567FA5A4253264F7004611CD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5A3253264F7004611CD /* SignUpVC.swift */; };
+		EFB77769BBD63356BA52F02D /* Pods_VTB_HACKATHON_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84904E545EA468F5629D7EB8 /* Pods_VTB_HACKATHON_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		561576F92532A9EC003BC7FB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		561576FF2532CB5B003BC7FB /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		561577022532CB75003BC7FB /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		561577052532CCFA003BC7FB /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		561577082532CE98003BC7FB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		56196E222532777A00619CF6 /* CreditDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailsVC.swift; sourceTree = "<group>"; };
 		56196E252532779D00619CF6 /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
 		56196E2825327CFC00619CF6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -66,6 +75,9 @@
 		567FA59D25326476004611CD /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		567FA5A0253264C7004611CD /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		567FA5A3253264F7004611CD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		6B06D1877D58E3D2A5CF3FFC /* Pods-VTB_HACKATHON_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB_HACKATHON_iOS.debug.xcconfig"; path = "Target Support Files/Pods-VTB_HACKATHON_iOS/Pods-VTB_HACKATHON_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		84904E545EA468F5629D7EB8 /* Pods_VTB_HACKATHON_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTB_HACKATHON_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F546DA1551A558100E8FF996 /* Pods-VTB_HACKATHON_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTB_HACKATHON_iOS.release.xcconfig"; path = "Target Support Files/Pods-VTB_HACKATHON_iOS/Pods-VTB_HACKATHON_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,17 +85,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB77769BBD63356BA52F02D /* Pods_VTB_HACKATHON_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A8A58B7039BDB8249C7B60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84904E545EA468F5629D7EB8 /* Pods_VTB_HACKATHON_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F71F3C03E117B09E56794B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B06D1877D58E3D2A5CF3FFC /* Pods-VTB_HACKATHON_iOS.debug.xcconfig */,
+				F546DA1551A558100E8FF996 /* Pods-VTB_HACKATHON_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		567FA5182530985A004611CD = {
 			isa = PBXGroup;
 			children = (
 				567FA5232530985A004611CD /* VTB_HACKATHON_iOS */,
 				567FA5222530985A004611CD /* Products */,
+				3F71F3C03E117B09E56794B8 /* Pods */,
+				37A8A58B7039BDB8249C7B60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +151,7 @@
 		567FA5392530987B004611CD /* API */ = {
 			isa = PBXGroup;
 			children = (
+				561577052532CCFA003BC7FB /* DataSource.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -129,6 +162,7 @@
 				567FA55B2531D5A0004611CD /* User.swift */,
 				567FA55E2531D5B7004611CD /* Car.swift */,
 				567FA5842531E6A8004611CD /* Credential.swift */,
+				561577082532CE98003BC7FB /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +172,8 @@
 			children = (
 				567FA56F2531E06D004611CD /* ButtonCell.swift */,
 				567FA5972532201C004611CD /* SliderCell.swift */,
+				561576FF2532CB5B003BC7FB /* HeaderCell.swift */,
+				561577022532CB75003BC7FB /* HistoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 567FA5352530985E004611CD /* Build configuration list for PBXNativeTarget "VTB_HACKATHON_iOS" */;
 			buildPhases = (
+				D4258C5A82B10D0CB8B94BF6 /* [CP] Check Pods Manifest.lock */,
 				567FA51D2530985A004611CD /* Sources */,
 				567FA51E2530985A004611CD /* Frameworks */,
 				567FA51F2530985A004611CD /* Resources */,
+				96E9C459818D7C19E5AEEA35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +289,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		96E9C459818D7C19E5AEEA35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VTB_HACKATHON_iOS/Pods-VTB_HACKATHON_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VTB_HACKATHON_iOS/Pods-VTB_HACKATHON_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VTB_HACKATHON_iOS/Pods-VTB_HACKATHON_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4258C5A82B10D0CB8B94BF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VTB_HACKATHON_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		567FA51D2530985A004611CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -259,18 +339,22 @@
 				567FA59B25326454004611CD /* ProfileVC.swift in Sources */,
 				567FA5982532201D004611CD /* SliderCell.swift in Sources */,
 				567FA58F2531ED42004611CD /* CustomView.swift in Sources */,
+				561577062532CCFA003BC7FB /* DataSource.swift in Sources */,
 				56196E2925327CFC00619CF6 /* Validation.swift in Sources */,
 				567FA5A1253264C7004611CD /* SignInVC.swift in Sources */,
 				56196E262532779D00619CF6 /* PersonalDataVC.swift in Sources */,
+				561577092532CE98003BC7FB /* Data.swift in Sources */,
 				567FA5732531E0BA004611CD /* PopupVC+UI.swift in Sources */,
 				567FA549253128A4004611CD /* Constants.swift in Sources */,
 				567FA59E25326476004611CD /* HistoryVC.swift in Sources */,
 				567FA5252530985A004611CD /* AppDelegate.swift in Sources */,
 				567FA55C2531D5A0004611CD /* User.swift in Sources */,
+				561577002532CB5B003BC7FB /* HeaderCell.swift in Sources */,
 				567FA5272530985B004611CD /* SceneDelegate.swift in Sources */,
 				567FA5A4253264F7004611CD /* SignUpVC.swift in Sources */,
 				567FA5882531ECA0004611CD /* ImageViewExtension.swift in Sources */,
 				567FA5592531409E004611CD /* PopupVC.swift in Sources */,
+				561577032532CB75003BC7FB /* HistoryCell.swift in Sources */,
 				567FA5852531E6A8004611CD /* Credential.swift in Sources */,
 				567FA55F2531D5B7004611CD /* Car.swift in Sources */,
 				56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */,
@@ -423,6 +507,7 @@
 		};
 		567FA5362530985E004611CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B06D1877D58E3D2A5CF3FFC /* Pods-VTB_HACKATHON_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +527,7 @@
 		};
 		567FA5372530985E004611CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F546DA1551A558100E8FF996 /* Pods-VTB_HACKATHON_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

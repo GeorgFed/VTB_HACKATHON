@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CameraManager
 
 class CameraVC: UIViewController {
 
@@ -14,6 +15,40 @@ class CameraVC: UIViewController {
     @IBOutlet weak var snapButton: UIButton!
     @IBOutlet weak var messageLbl: UILabel!
     
+    let cameraManager = CameraManager()
+    var image: UIImage?
+    
+    @IBAction func snapBtnTapped(_ sender: Any) {
+        // didTapCameraView()
+        cameraManager.capturePictureWithCompletion({ result in
+            switch result {
+                case .failure:
+                    print("Failed")
+                    // error handling
+                case .success(let content):
+                    self.image = content.asImage;
+                    self.performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+                    print("Success")
+            }
+        })
+
+    }
+    
+    override func viewDidLoad() {
+        cameraManager.addPreviewLayerToView(self.cameraView)
+        cameraManager.cameraOutputQuality = .medium
+        cameraManager.writeFilesToPhoneLibrary = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is PopupVC {
+            let vc = segue.destination as? PopupVC
+            vc!.imageToProcess = self.image
+        }
+    }
+}
+
+    /*
     var images = [UIImage]()
 
     var captureSession: AVCaptureSession!
@@ -52,12 +87,9 @@ class CameraVC: UIViewController {
             print("some problem here")
         }
     }
+    */
 
-    
-    @IBAction func snapBtnTapped(_ sender: Any) {
-        didTapCameraView()
-    }
-    
+    /*
     @objc func didTapCameraView() {
         let currentSettings = getSettings()
         performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
@@ -106,3 +138,4 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
         }
     }
 }
+*/

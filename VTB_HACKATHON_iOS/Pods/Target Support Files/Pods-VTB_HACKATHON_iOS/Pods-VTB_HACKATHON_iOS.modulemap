@@ -1,0 +1,6 @@
+framework module Pods_VTB_HACKATHON_iOS {
+  umbrella header "Pods-VTB_HACKATHON_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
