@@ -32,18 +32,29 @@ class CameraVC: UIViewController {
         cameraManager.capturePictureWithCompletion({ result in
             switch result {
                 case .failure:
-                    print("Failed")
+                    self.messageLbl.text = "Машина не определена."
                     // error handling
                 case .success(let content):
                     self.imageToProcess = content.asImage;
-                    self.fetchData {
+                    let vSpinner = self.showSpinner(onView: self.cameraView, color: .black, alpha: 0.3)
+                    self.fetchData { (err) in
                         print("here")
                         if self.prob! >= 0.3 {
-                            self.getCarInfo {
-                                self.showPopup()
+                            self.getCarInfo { err in
+                                self.removeSpinner(vSpinner: vSpinner)
+                                if err {
+                                    self.messageLbl.text = "Машина не найдена."
+                                } else {
+                                    self.showPopup()
+                                }
                             }
                         } else {
-                            print("Unable to recognize")
+                            
+                            self.removeSpinner(vSpinner: vSpinner)
+                            if err {
+                                self.messageLbl.text = "Машина не определена."
+                            }
+                            self.messageLbl.text = "Машина не определена."
                         }
                     }
                     print("Success")
@@ -52,32 +63,32 @@ class CameraVC: UIViewController {
 
     }
     
-    func fetchData(handler: @escaping () -> ()) {
+    func fetchData(handler: @escaping (_ err: Bool) -> ()) {
         // let imageData:NSData = imageToProcess!.pngData()! as NSData
         // let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters).replacingOccurrences(of: "\n", with: "", options: .literal, range: nil)
         imageToProcess = imageToProcess!.resized(withPercentage: 0.2)
         let imageData = imageToProcess?.jpegData(compressionQuality: 1)
         let imageBase64String = imageData?.base64EncodedString()
         // print(imageBase64String!)
-        DataSource.shared.getCar(carPhotoB64: imageBase64String!) { (model, prob) in
+        DataSource.shared.getCar(carPhotoB64: imageBase64String!) { (err, model, prob) in
             self.model = model
             self.prob = prob
-            handler()
+            handler(err)
         }
     }
     
-    func getCarInfo(handler: @escaping () -> ()) {
-        guard let model = model else {
-            return
+    func getCarInfo(handler: @escaping (_ err: Bool) -> ()) {
+        if model == nil {
+            handler(true)
         }
         
-        DataSource.shared.searchCar(model: model) { (make, make_model, minPrice, maxPrice, imageURL) in
+        DataSource.shared.searchCar(model: model!) { (err, make, make_model, minPrice, maxPrice, imageURL) in
             self.make = make
             self.make_model = make_model
             self.minPrice = minPrice
             self.maxPrice = maxPrice
             self.imageURL = imageURL
-            handler()
+            handler(err)
         }
     }
     
@@ -87,7 +98,7 @@ class CameraVC: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        self.messageLbl.text = "Нажмите, чтобы определить машину."
         cameraManager.addPreviewLayerToView(self.cameraView)
         cameraManager.cameraOutputQuality = .high
         cameraManager.shouldRespondToOrientationChanges = false

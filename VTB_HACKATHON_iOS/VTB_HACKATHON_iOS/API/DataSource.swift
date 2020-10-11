@@ -16,23 +16,29 @@ class DataSource {
     let url = URL(string: "https://vtb-backend.herokuapp.com/api/")!
     let carURL = "https://vtb-backend.herokuapp.com/api/car_recognize/"
     let marketplaceSearch = "https://vtb-backend.herokuapp.com/api/marketplace_search/"
-    func getCar(carPhotoB64: String, completion: @escaping (_ model: String, _ prob: Double) -> ()) {
+    func getCar(carPhotoB64: String, completion: @escaping (_ err: Bool, _ model: String, _ prob: Double) -> ()) {
         AF.request(carURL, method: .post, parameters: CarPhoto(photo: carPhotoB64), encoder: JSONParameterEncoder.default).response { response in
             debugPrint(response)
+            if response.error != nil {
+                completion(true, "", 0)
+            }
             let json = JSON(response.data!)
             print(json)
             print(json["car"])
-            completion(json["car"][0].string!, json["car"][1].doubleValue)
+            completion(false, json["car"][0].string!, json["car"][1].doubleValue)
         }
     }
     
-    func searchCar(model: String, completion: @escaping (_ make: String, _ make_model: String, _ minPrice: Int, _ maxPrice: Int, _ imageURL: String) -> ()) {
+    func searchCar(model: String, completion: @escaping (_ err: Bool, _ make: String, _ make_model: String, _ minPrice: Int, _ maxPrice: Int, _ imageURL: String) -> ()) {
         AF.request(marketplaceSearch, method: .post, parameters: Car(query: model), encoder: JSONParameterEncoder.default).response { response in
+            if response.error != nil {
+                completion(true, "", "", 0, 0, "")
+            }
             debugPrint(response)
             let json = JSON(response.data!)
             debugPrint(json)
-            guard let make = json["make"].string else { return }
-            completion(make, json["model"].string!, json["minPrice"].int!, json["maxPrice"].int!, json["imageUrl"].string!)
+            // guard let make = json["make"].string else { return }
+            completion(false, json["make"].string!, json["model"].string!, json["minPrice"].int!, json["maxPrice"].int!, json["imageUrl"].string!)
         }
     }
 }
