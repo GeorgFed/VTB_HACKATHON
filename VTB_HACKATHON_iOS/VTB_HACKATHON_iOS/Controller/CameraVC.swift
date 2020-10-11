@@ -14,70 +14,63 @@ class CameraVC: UIViewController {
     @IBOutlet weak var snapButton: UIButton!
     @IBOutlet weak var messageLbl: UILabel!
     
-    // MARK: - AV
+    var images = [UIImage]()
+
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
-    
-    var photoData: Data?
-    
-    @IBOutlet weak var betaImageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        previewLayer.frame = cameraView.bounds
+        startCamera()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        /*
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraView))
-        tap.numberOfTapsRequired = 1
-        */
-        
+
+    func startCamera() {
         captureSession = AVCaptureSession()
-        captureSession.sessionPreset = AVCaptureSession.Preset.hd1920x1080
-        
-        let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: backCamera!)
-            if captureSession.canAddInput(input) == true {
+        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+        cameraOutput = AVCapturePhotoOutput()
+
+        if let device = AVCaptureDevice.default(for: .video),
+           let input = try? AVCaptureDeviceInput(device: device) {
+            if (captureSession.canAddInput(input)) {
                 captureSession.addInput(input)
+                if (captureSession.canAddOutput(cameraOutput)) {
+                    captureSession.addOutput(cameraOutput)
+                    previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                    previewLayer.frame = cameraView.bounds
+                    cameraView.layer.addSublayer(previewLayer)
+                    captureSession.startRunning()
+                }
+            } else {
+                print("issue here : captureSesssion.canAddInput")
             }
-            
-            cameraOutput = AVCapturePhotoOutput()
-            if captureSession.canAddOutput(cameraOutput) == true {
-                captureSession.addOutput(cameraOutput!)
-            }
-            
-            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-            previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-            
-            cameraView.layer.addSublayer(previewLayer!)
-            // cameraView.addGestureRecognizer(tap)
-            captureSession.startRunning()
-        } catch {
-            // MARK: - Camera Error Handling
-            debugPrint(error)
+        } else {
+            print("some problem here")
         }
     }
+
     
     @IBAction func snapBtnTapped(_ sender: Any) {
         didTapCameraView()
     }
     
     @objc func didTapCameraView() {
+        let currentSettings = getSettings()
+        performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+        /*
+         let currentSettings = getSettings()
+         cameraOutput.capturePhoto(with: currentSettings, delegate: self)
+         */
+    }
+    
+    func getSettings() -> AVCapturePhotoSettings {
         let settings = AVCapturePhotoSettings()
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
-        // cameraOutput.capturePhoto(with: settings, delegate: self)
-        
-        performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+        return settings
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,21 +81,28 @@ class CameraVC: UIViewController {
     }
 }
 
-/*
-extension CameraVC: AVCapturePhotoCaptureDelegate {
-    // MARK: - ERROR!!!
-    func photoOutput(_ output: AVCapturePhotoOutput,
-     didFinishProcessingPhoto photo: AVCapturePhoto,
-     error: Error?) {
+extension CameraVC : AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+
         if let error = error {
-            debugPrint(error)
+            print("error occured : \(error)")
+        }
+
+        if let dataImage = photo.fileDataRepresentation() {
+            print(UIImage(data: dataImage)?.size as Any)
+
+            let dataProvider = CGDataProvider(data: dataImage as CFData)
+            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
+            let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.right)
+
+            /**
+               save image in array / do whatever you want to do with the image here
+            */
+            self.images.append(image)
+
         } else {
-            photoData = photo.fileDataRepresentation()
-            let image = UIImage(data: photoData!)
-            // self.betaImageView.image = image
-            // MARK: - PROCESS IMAGE
+            print("some error here")
         }
     }
-
 }
-*/

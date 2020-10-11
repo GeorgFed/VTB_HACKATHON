@@ -28,8 +28,8 @@ enum RegEx: String {
     case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}" // Email
     case password = "^.{6,15}$" // Password length 6-15
     case alphabeticStringWithSpace = "^[a-zA-Z ]*$" // e.g. hello sandeep
-    case alphabeticStringFirstLetterCaps = "^[A-Z]+[a-zA-Z]*$" // SandsHell
-    case phoneNo = "[0-9]{10,14}" // PhoneNo 10-14 Digits        //Change RegEx according to your Requirement
+    case alphabeticStringFirstLetterCaps = "^[А-Я]+[а-я ]*$" // SandsHell
+    case phoneNo = "[0-9+- ]{10,14}" // PhoneNo 10-14 Digits        //Change RegEx according to your Requirement
 }
 
 

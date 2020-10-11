@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561576FA2532A9EC003BC7FB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561576F92532A9EC003BC7FB /* StringExtension.swift */; };
 		56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E222532777A00619CF6 /* CreditDetailsVC.swift */; };
 		56196E262532779D00619CF6 /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E252532779D00619CF6 /* PersonalDataVC.swift */; };
 		56196E2925327CFC00619CF6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E2825327CFC00619CF6 /* Validation.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		561576F92532A9EC003BC7FB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		56196E222532777A00619CF6 /* CreditDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailsVC.swift; sourceTree = "<group>"; };
 		56196E252532779D00619CF6 /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
 		56196E2825327CFC00619CF6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				567FA5812531E468004611CD /* ButtonExtension.swift */,
 				567FA5872531ECA0004611CD /* ImageViewExtension.swift */,
+				561576F92532A9EC003BC7FB /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */,
 				567FA5702531E06D004611CD /* ButtonCell.swift in Sources */,
 				56196E2E2532813300619CF6 /* CustomTextField.swift in Sources */,
+				561576FA2532A9EC003BC7FB /* StringExtension.swift in Sources */,
 				567FA54E25312B87004611CD /* CameraVC.swift in Sources */,
 				567FA5822531E468004611CD /* ButtonExtension.swift in Sources */,
 				567FA5952531FBAF004611CD /* HideKeyboard.swift in Sources */,

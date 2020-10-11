@@ -14,11 +14,15 @@ class CreditDetailsVC: UITableViewController {
     @IBOutlet weak var creditsum: UITextField!
     @IBOutlet weak var duration: HoshiTextField!
     @IBOutlet weak var interestRate: HoshiTextField!
+    @IBOutlet weak var nextBtn: UIButton!
     
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        validate()
+        
         self.hideKeyboard()
         brand.delegate = self
         price.delegate = self
@@ -47,6 +51,19 @@ class CreditDetailsVC: UITableViewController {
     
     @IBAction func closeBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func allFilled() -> Bool {
+        return brand.text != "" && price.text != "" && creditsum.text != "" && duration.text != "" && interestRate.text != "" && creditsum.text != "0"
+    }
+    
+    func validate() {
+        nextBtn.isEnabled = allFilled()
+        nextBtn.alpha = (allFilled() == true) ? 1.0 : 0.2
+    }
+    
+    @IBAction func nextBtnPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Identifier.toPersonalDataVC, sender: nil)
     }
 }
 
@@ -91,11 +108,22 @@ extension CreditDetailsVC {
 
 extension CreditDetailsVC: UITextFieldDelegate {
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        nextBtn.isEnabled = allFilled()
+        nextBtn.alpha = (allFilled() == true) ? 1.0 : 0.2
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 2 && textField.text != "" {
             slider.setValue(Float(textField.text!)!, animated: true)
         }
-        textFieldShouldReturn(textField)
+        validate()
+        if textField.text != "" {
+            textField.tintColor = .green
+        } else {
+            textField.tintColor = .red
+        }
+        // textFieldShouldReturn(textField)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

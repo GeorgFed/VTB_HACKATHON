@@ -53,4 +53,17 @@ extension UIButton {
     func setCornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
     }
+    
+    override open var isEnabled: Bool {
+        didSet {
+            DispatchQueue.main.async {
+                if self.isEnabled {
+                    self.alpha = 1.0
+                }
+                else {
+                    self.alpha = 0.2
+                }
+            }
+        }
+    }
 }

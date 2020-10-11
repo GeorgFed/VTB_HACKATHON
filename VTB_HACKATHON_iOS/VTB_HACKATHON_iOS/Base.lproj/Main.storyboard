@@ -693,7 +693,7 @@
         <!--Personal DataVC-->
         <scene sceneID="ifM-fO-lnq">
             <objects>
-                <tableViewController id="ILa-4Q-y5B" customClass="PersonalDataVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="ILa-4Q-y5B" customClass="PersonalDataVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RdE-DS-JDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,6 +717,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mB-IU-UyX">
                                                     <rect key="frame" x="370" y="20" width="24" height="24"/>
                                                     <state key="normal" image="Сlose"/>
+                                                    <connections>
+                                                        <action selector="closeBtnPressde:" destination="ILa-4Q-y5B" eventType="touchUpInside" id="Sza-jc-dpZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -744,7 +747,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="YDW-L3-OAd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -796,7 +799,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="mVO-ej-mKg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -848,7 +851,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="bpB-EF-pdK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="address-level2"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -900,7 +903,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="bvl-HN-vtT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -943,7 +946,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Контакты" id="8Nw-DD-99d">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="lca-9K-cS4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="lca-9K-cS4">
                                         <rect key="frame" x="0.0" y="482" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lca-9K-cS4" id="NuK-WD-scn">
@@ -956,7 +959,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="m1U-80-gRf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -995,7 +998,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="obE-5P-peh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="obE-5P-peh">
                                         <rect key="frame" x="0.0" y="554" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obE-5P-peh" id="Ebr-3W-XjK">
@@ -1008,7 +1011,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="t6y-7s-u9D"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1049,10 +1052,66 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Доход" id="jAM-Vl-qDf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="yvR-Nd-7W5">
+                                        <rect key="frame" x="0.0" y="682" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvR-Nd-7W5" id="V5n-HP-Hkb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ежемесячная зарплата" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erZ-rN-h8G" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="15" width="374" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="7rC-Yt-FKJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone" translatesAutoresizingMaskIntoConstraints="NO" id="m46-Uj-5tT">
+                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="3sQ-td-G2d"/>
+                                                        <constraint firstAttribute="width" constant="16" id="ONn-fg-G4M"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m46-Uj-5tT" firstAttribute="centerY" secondItem="erZ-rN-h8G" secondAttribute="centerY" id="8mY-Ik-Gmy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m46-Uj-5tT" secondAttribute="trailing" constant="16" id="FSL-wh-rV4"/>
+                                                <constraint firstItem="erZ-rN-h8G" firstAttribute="top" secondItem="V5n-HP-Hkb" secondAttribute="topMargin" constant="4" id="OUD-hr-Iu5"/>
+                                                <constraint firstItem="erZ-rN-h8G" firstAttribute="trailing" secondItem="V5n-HP-Hkb" secondAttribute="trailingMargin" id="bAI-T1-hwb"/>
+                                                <constraint firstItem="erZ-rN-h8G" firstAttribute="leading" secondItem="V5n-HP-Hkb" secondAttribute="leadingMargin" id="hLB-65-3hW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection id="q5m-5c-viX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="0Y9-yF-ZZV" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="662" width="414" height="72"/>
+                                        <rect key="frame" x="0.0" y="790" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Y9-yF-ZZV" id="oaU-Ua-H3V">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
@@ -1064,7 +1123,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="AaW-lQ-pJ9"/>
                                                     </constraints>
-                                                    <state key="normal" title="ОФОРМЛЕНИЕ КРЕДИТА (2/2)">
+                                                    <state key="normal" title="ГОТОВО (2/2)">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -1072,6 +1131,9 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="doneBtnPressed:" destination="ILa-4Q-y5B" eventType="touchUpInside" id="Q9G-kG-BAZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1089,12 +1151,15 @@
                             <outlet property="delegate" destination="ILa-4Q-y5B" id="fok-mJ-AL9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="dfg-R5-eMv"/>
                     <connections>
                         <outlet property="birthdate" destination="VbS-8v-tyB" id="JQV-77-dMI"/>
                         <outlet property="birthplace" destination="RkE-Ma-WgK" id="yIR-S6-FOv"/>
+                        <outlet property="doneBtn" destination="Woy-ON-8gM" id="KM7-BZ-TNC"/>
                         <outlet property="email" destination="aDn-Y0-sgt" id="hH2-0b-0Eg"/>
                         <outlet property="gender" destination="h1z-Pt-Zab" id="jGz-fF-Ed8"/>
                         <outlet property="header" destination="OWE-pY-pOl" id="6GR-gq-imj"/>
+                        <outlet property="income" destination="erZ-rN-h8G" id="S9y-Ty-D6g"/>
                         <outlet property="name" destination="T0s-mU-SUE" id="gAj-yi-Qdn"/>
                         <outlet property="phone" destination="oGA-VC-c7n" id="2bh-Yp-EEb"/>
                     </connections>
@@ -1408,7 +1473,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="Gbe-TH-ViN"/>
                                                     </constraints>
-                                                    <state key="normal" title="ОФОРМЛЕНИЕ КРЕДИТА (1/2)">
+                                                    <state key="normal" title="ДАЛЕЕ (1/2)">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -1416,6 +1481,9 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="nextBtnPressed:" destination="EIw-Q6-zaw" eventType="touchUpInside" id="s8T-Wu-1J8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1440,8 +1508,10 @@
                         <outlet property="duration" destination="Sgd-nG-ZJS" id="FXn-MZ-Xpn"/>
                         <outlet property="header" destination="k9Y-oR-dqc" id="mBB-cV-peP"/>
                         <outlet property="interestRate" destination="tir-C5-8eM" id="5gf-cF-B7T"/>
+                        <outlet property="nextBtn" destination="Bpo-8F-9GY" id="C0r-Ks-NOh"/>
                         <outlet property="price" destination="oe3-Qa-chD" id="7Qy-Pg-z10"/>
                         <outlet property="slider" destination="USu-OE-ymQ" id="GAj-KH-rpZ"/>
+                        <segue destination="ILa-4Q-y5B" kind="show" identifier="toPersonalDataVC" id="af5-QG-M0e"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6g-UF-OFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1479,6 +1549,9 @@
         </designable>
         <designable name="dCo-a2-S5L">
             <size key="intrinsicContentSize" width="41" height="18.5"/>
+        </designable>
+        <designable name="erZ-rN-h8G">
+            <size key="intrinsicContentSize" width="157" height="18.5"/>
         </designable>
         <designable name="h1z-Pt-Zab">
             <size key="intrinsicContentSize" width="26.5" height="18.5"/>

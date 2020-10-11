@@ -23,13 +23,12 @@ enum CredentialType: Int {
 }
 
 struct Identifier {
-    public static let inputCell = "inputCell"
     public static let buttonCell = "buttonCell"
     public static let sliderCell = "sliderCell"
     
     public static let toPopupVC = "toPopupVC"
-    public static let toCreditRequestVC = "toCreditRequestVC"
     public static let toCreditDetailsVC = "toCreditDetailsVC"
+    public static let toPersonalDataVC = "toPersonalDataVC"
 }
 
 // MARK: - App color scheme

@@ -16,6 +16,10 @@ import UIKit
      
      This property applies a color to the lower edge of the control. The default value for this property is a clear color.
      */
+    open override func tintColorDidChange() {
+        borderActiveColor = tintColor
+    }
+    
     @IBInspectable dynamic open var borderInactiveColor: UIColor? {
         didSet {
             updateBorder()
@@ -124,6 +128,8 @@ import UIKit
 
         }
     }
+    
+    
     
     // MARK: - Private
     
