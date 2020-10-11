@@ -32,7 +32,7 @@ class PopupVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func toCreditBtnTapped(_ sender: Any) {
-        performSegue(withIdentifier: Identifier.toCreditRequestVC, sender: nil)
+        performSegue(withIdentifier: Identifier.toCreditDetailsVC, sender: nil)
     }
     @IBAction func toOtherBtnTapped(_ sender: Any) {
     }

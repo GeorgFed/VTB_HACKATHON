@@ -29,6 +29,7 @@ struct Identifier {
     
     public static let toPopupVC = "toPopupVC"
     public static let toCreditRequestVC = "toCreditRequestVC"
+    public static let toCreditDetailsVC = "toCreditDetailsVC"
 }
 
 // MARK: - App color scheme

@@ -571,195 +571,12 @@
                         <outlet property="popup" destination="7mZ-iP-cFr" id="PCS-N5-Bf4"/>
                         <outlet property="toCreditBtn" destination="uIu-40-l7S" id="ItU-XG-4fA"/>
                         <outlet property="toOtherBtn" destination="sJh-RW-QiI" id="4GM-xJ-U0a"/>
-                        <segue destination="PSb-jg-xi3" kind="show" identifier="toCreditRequestVC" id="1ei-3a-wyg"/>
+                        <segue destination="EIw-Q6-zaw" kind="show" identifier="toCreditDetailsVC" id="InZ-x0-imR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yy-kx-mBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940.57971014492762" y="93.75"/>
-        </scene>
-        <!--Credit RequestVC-->
-        <scene sceneID="dmd-Ib-iZf">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="PSb-jg-xi3" customClass="CreditRequestVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oRd-Ua-BbB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-n3-jQ4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGz-9T-LOp">
-                                        <rect key="frame" x="16" y="18" width="33" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKs-YO-h1S">
-                                        <rect key="frame" x="374" y="20" width="24" height="24"/>
-                                        <state key="normal" image="Сlose"/>
-                                        <connections>
-                                            <action selector="closeBtnPressed:" destination="PSb-jg-xi3" eventType="touchUpInside" id="bDa-go-u3U"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="OGz-9T-LOp" firstAttribute="leading" secondItem="BEc-n3-jQ4" secondAttribute="leading" constant="16" id="3zn-Kq-HGu"/>
-                                    <constraint firstItem="OKs-YO-h1S" firstAttribute="top" secondItem="BEc-n3-jQ4" secondAttribute="top" constant="20" id="D2M-WS-Jx7"/>
-                                    <constraint firstAttribute="bottom" secondItem="OGz-9T-LOp" secondAttribute="bottom" constant="18" id="Ff5-Oi-tX7"/>
-                                    <constraint firstItem="OGz-9T-LOp" firstAttribute="top" secondItem="BEc-n3-jQ4" secondAttribute="top" constant="18" id="bZW-pv-PtE"/>
-                                    <constraint firstAttribute="trailing" secondItem="OKs-YO-h1S" secondAttribute="trailing" constant="16" id="f1N-2L-Sln"/>
-                                    <constraint firstAttribute="height" constant="64" id="uw4-sg-oyN"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-ZW-jXT">
-                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" id="2LH-DE-VLT" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="72"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LH-DE-VLT" id="Cmx-8J-ENc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ФИО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-lR-7Nn" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="36" y="15" width="342" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="xAa-m3-so0"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                            <color key="value" red="0.39607843139999999" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                            <real key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </textField>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pej-PE-TVR">
-                                                    <rect key="frame" x="362" y="29" width="16" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="16" id="cjD-Co-ZPJ"/>
-                                                        <constraint firstAttribute="height" constant="16" id="xOP-Sg-JGc"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="TFz-lR-7Nn" firstAttribute="trailing" secondItem="Cmx-8J-ENc" secondAttribute="trailingMargin" constant="-16" id="1Wm-Mw-ddG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Pej-PE-TVR" secondAttribute="trailing" constant="16" id="1l9-X2-Lxn"/>
-                                                <constraint firstItem="TFz-lR-7Nn" firstAttribute="top" secondItem="Cmx-8J-ENc" secondAttribute="topMargin" constant="4" id="Dy9-Oz-yrw"/>
-                                                <constraint firstItem="TFz-lR-7Nn" firstAttribute="leading" secondItem="Cmx-8J-ENc" secondAttribute="leadingMargin" constant="16" id="iSU-g0-T0O"/>
-                                                <constraint firstItem="Pej-PE-TVR" firstAttribute="centerY" secondItem="TFz-lR-7Nn" secondAttribute="centerY" id="qKE-sE-qSE"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="TFz-lR-7Nn" id="GL4-Uw-aU4"/>
-                                            <outlet property="inputImage" destination="Pej-PE-TVR" id="xpq-sq-rah"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sliderCell" id="Uuh-zL-p6m" customClass="SliderCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="127.5" width="414" height="72"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uuh-zL-p6m" id="gqj-39-16K">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сумма кредита:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-b6-J2G">
-                                                    <rect key="frame" x="36" y="8" width="129" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2000000" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-hb-wna">
-                                                    <rect key="frame" x="34" y="33" width="346" height="31"/>
-                                                    <connections>
-                                                        <action selector="sliderHasChanged:" destination="Uuh-zL-p6m" eventType="valueChanged" id="wbw-Yj-5UB"/>
-                                                    </connections>
-                                                </slider>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="gkB-hb-wna" firstAttribute="leading" secondItem="gqj-39-16K" secondAttribute="leading" constant="36" id="0Xx-dB-Zq2"/>
-                                                <constraint firstItem="Nqt-b6-J2G" firstAttribute="leading" secondItem="gqj-39-16K" secondAttribute="leading" constant="36" id="7eb-Np-wOe"/>
-                                                <constraint firstItem="gkB-hb-wna" firstAttribute="top" secondItem="Nqt-b6-J2G" secondAttribute="bottom" constant="4" id="Mx0-Mj-mBG"/>
-                                                <constraint firstAttribute="trailing" secondItem="gkB-hb-wna" secondAttribute="trailing" constant="36" id="R9R-7g-RzF"/>
-                                                <constraint firstItem="Nqt-b6-J2G" firstAttribute="top" secondItem="gqj-39-16K" secondAttribute="top" constant="8" id="TEE-A5-aYl"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="slider" destination="gkB-hb-wna" id="IyL-UU-Utx"/>
-                                            <outlet property="title" destination="Nqt-b6-J2G" id="BCY-2A-WXG"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buttonCell" id="ELh-xe-Kva" customClass="ButtonCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="199.5" width="414" height="72"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELh-xe-Kva" id="0Ty-rE-ThX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNw-MG-xgp">
-                                                    <rect key="frame" x="44" y="1" width="326" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="ffC-kA-MmE"/>
-                                                    </constraints>
-                                                    <state key="normal" title="ПРОДОЛЖИТЬ"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="8"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fNw-MG-xgp" secondAttribute="trailing" constant="24" id="CdP-EN-lbw"/>
-                                                <constraint firstItem="fNw-MG-xgp" firstAttribute="leading" secondItem="0Ty-rE-ThX" secondAttribute="leadingMargin" constant="24" id="G4i-yR-3Yh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fNw-MG-xgp" secondAttribute="bottom" constant="12" id="Nid-7q-vBa"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="requestBtn" destination="fNw-MG-xgp" id="RS0-ny-dVW"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dDI-2T-eeu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BEc-n3-jQ4" firstAttribute="leading" secondItem="dDI-2T-eeu" secondAttribute="leading" id="BVu-un-2tI"/>
-                            <constraint firstAttribute="bottom" secondItem="UaT-ZW-jXT" secondAttribute="bottom" id="CbV-Qf-rbw"/>
-                            <constraint firstItem="BEc-n3-jQ4" firstAttribute="trailing" secondItem="dDI-2T-eeu" secondAttribute="trailing" id="DY5-j5-3qt"/>
-                            <constraint firstItem="UaT-ZW-jXT" firstAttribute="leading" secondItem="dDI-2T-eeu" secondAttribute="leading" id="e87-Xw-qUK"/>
-                            <constraint firstItem="BEc-n3-jQ4" firstAttribute="top" secondItem="dDI-2T-eeu" secondAttribute="top" id="kd5-O6-lsy"/>
-                            <constraint firstItem="UaT-ZW-jXT" firstAttribute="top" secondItem="BEc-n3-jQ4" secondAttribute="bottom" id="n2m-Pw-OSz"/>
-                            <constraint firstItem="UaT-ZW-jXT" firstAttribute="trailing" secondItem="dDI-2T-eeu" secondAttribute="trailing" id="wtG-oJ-evj"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="1xS-bB-mZh"/>
-                    <connections>
-                        <outlet property="closeBtn" destination="OKs-YO-h1S" id="y6X-P8-W1M"/>
-                        <outlet property="header" destination="OGz-9T-LOp" id="fFf-hg-9dp"/>
-                        <outlet property="tableView" destination="UaT-ZW-jXT" id="BSS-lK-Gue"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f4U-r8-jw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1771.0144927536232" y="93.75"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="Udx-Ta-RfB">
@@ -769,7 +586,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfq-e0-a0O" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfq-e0-a0O" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="402" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="OSg-u2-gFa"/>
@@ -782,7 +599,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-a2-S5L" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-a2-S5L" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="342" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="64R-kU-EEx"/>
@@ -809,7 +626,7 @@
                                     <constraint firstAttribute="height" constant="16" id="c03-0K-Lk5"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-Cl-PVx" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-Cl-PVx" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="462" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="MPS-CW-Cvg"/>
@@ -873,10 +690,10 @@
             </objects>
             <point key="canvasLocation" x="941" y="1525"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Personal DataVC-->
         <scene sceneID="ifM-fO-lnq">
             <objects>
-                <tableViewController id="ILa-4Q-y5B" sceneMemberID="viewController">
+                <tableViewController id="ILa-4Q-y5B" customClass="PersonalDataVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RdE-DS-JDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -914,7 +731,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Личные данные" id="gVf-RI-9hC">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="1Yx-fR-36U" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="1Yx-fR-36U">
                                         <rect key="frame" x="0.0" y="138" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Yx-fR-36U" id="vxQ-Fr-OtP">
@@ -965,12 +782,8 @@
                                                 <constraint firstItem="a03-Ag-mOb" firstAttribute="centerY" secondItem="T0s-mU-SUE" secondAttribute="centerY" id="p3e-mZ-Vco"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="T0s-mU-SUE" id="Bxo-y6-o2s"/>
-                                            <outlet property="inputImage" destination="a03-Ag-mOb" id="f1k-Cd-6Z9"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="qQk-Uh-Ms8" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="qQk-Uh-Ms8">
                                         <rect key="frame" x="0.0" y="210" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qQk-Uh-Ms8" id="DGQ-c6-3ot">
@@ -1021,12 +834,8 @@
                                                 <constraint firstItem="VbS-8v-tyB" firstAttribute="trailing" secondItem="DGQ-c6-3ot" secondAttribute="trailingMargin" id="vvI-EE-Tn0"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="VbS-8v-tyB" id="cE6-J0-GHP"/>
-                                            <outlet property="inputImage" destination="kCV-gG-CvE" id="I9O-Kn-NG5"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="BxZ-Z6-v2d" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="BxZ-Z6-v2d">
                                         <rect key="frame" x="0.0" y="282" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BxZ-Z6-v2d" id="aG3-Ld-GzA">
@@ -1077,12 +886,8 @@
                                                 <constraint firstItem="RkE-Ma-WgK" firstAttribute="top" secondItem="aG3-Ld-GzA" secondAttribute="topMargin" constant="4" id="RaP-ON-qm5"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="RkE-Ma-WgK" id="B5k-3G-zV0"/>
-                                            <outlet property="inputImage" destination="0bh-z4-Z0L" id="c9C-Dy-hV0"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="4Fr-qe-8NM" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="4Fr-qe-8NM">
                                         <rect key="frame" x="0.0" y="354" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Fr-qe-8NM" id="k5y-NO-1m1">
@@ -1133,16 +938,12 @@
                                                 <constraint firstItem="h1z-Pt-Zab" firstAttribute="top" secondItem="k5y-NO-1m1" secondAttribute="topMargin" constant="4" id="bTF-dG-9uB"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="h1z-Pt-Zab" id="Ezz-bH-v4w"/>
-                                            <outlet property="inputImage" destination="ADu-1S-5z6" id="pQ9-9y-QZ2"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Контакты" id="8Nw-DD-99d">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="lca-9K-cS4" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="lca-9K-cS4">
                                         <rect key="frame" x="0.0" y="482" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lca-9K-cS4" id="NuK-WD-scn">
@@ -1193,12 +994,8 @@
                                                 <constraint firstItem="aDn-Y0-sgt" firstAttribute="top" secondItem="NuK-WD-scn" secondAttribute="topMargin" constant="4" id="qRW-Ap-z54"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="aDn-Y0-sgt" id="xdx-SB-gpD"/>
-                                            <outlet property="inputImage" destination="Act-P6-1xI" id="O5u-aq-CJH"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="obE-5P-peh" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="obE-5P-peh">
                                         <rect key="frame" x="0.0" y="554" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obE-5P-peh" id="Ebr-3W-XjK">
@@ -1249,10 +1046,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="4W5-jj-Rg2" secondAttribute="trailing" constant="16" id="g0b-3p-JNB"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="oGA-VC-c7n" id="8HA-y1-s0M"/>
-                                            <outlet property="inputImage" destination="4W5-jj-Rg2" id="vKR-7S-fSC"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1296,15 +1089,24 @@
                             <outlet property="delegate" destination="ILa-4Q-y5B" id="fok-mJ-AL9"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="birthdate" destination="VbS-8v-tyB" id="JQV-77-dMI"/>
+                        <outlet property="birthplace" destination="RkE-Ma-WgK" id="yIR-S6-FOv"/>
+                        <outlet property="email" destination="aDn-Y0-sgt" id="hH2-0b-0Eg"/>
+                        <outlet property="gender" destination="h1z-Pt-Zab" id="jGz-fF-Ed8"/>
+                        <outlet property="header" destination="OWE-pY-pOl" id="6GR-gq-imj"/>
+                        <outlet property="name" destination="T0s-mU-SUE" id="gAj-yi-Qdn"/>
+                        <outlet property="phone" destination="oGA-VC-c7n" id="2bh-Yp-EEb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vb9-6M-cli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3545" y="94"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Credit DetailsVC-->
         <scene sceneID="B1L-Sd-NwG">
             <objects>
-                <tableViewController id="EIw-Q6-zaw" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="EIw-Q6-zaw" customClass="CreditDetailsVC" customModule="VTB_HACKATHON_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fDW-V6-P0g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1328,6 +1130,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-Kv-cGh">
                                                     <rect key="frame" x="370" y="20" width="24" height="24"/>
                                                     <state key="normal" image="Сlose"/>
+                                                    <connections>
+                                                        <action selector="closeBtnPressed:" destination="EIw-Q6-zaw" eventType="touchUpInside" id="Brb-UN-8Cb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1342,7 +1147,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Автомобиль" id="TBa-6E-ReG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="Mju-gz-Brs" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="Mju-gz-Brs">
                                         <rect key="frame" x="0.0" y="138" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mju-gz-Brs" id="WpE-Fe-XAc">
@@ -1355,7 +1160,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="zR1-ut-wGc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1393,12 +1198,8 @@
                                                 <constraint firstItem="KuL-jh-8Nu" firstAttribute="leading" secondItem="WpE-Fe-XAc" secondAttribute="leadingMargin" id="xQw-jI-0kW"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="KuL-jh-8Nu" id="Fde-j6-2sK"/>
-                                            <outlet property="inputImage" destination="XgL-kK-4X0" id="cno-VM-4UG"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="LfG-kN-9cv" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="LfG-kN-9cv">
                                         <rect key="frame" x="0.0" y="210" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LfG-kN-9cv" id="a72-ea-jo4">
@@ -1411,7 +1212,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="VGp-FU-ZKh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1449,16 +1250,12 @@
                                                 <constraint firstItem="oe3-Qa-chD" firstAttribute="top" secondItem="a72-ea-jo4" secondAttribute="topMargin" constant="4" id="k5q-pt-Kbn"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="oe3-Qa-chD" id="0UZ-SA-KpO"/>
-                                            <outlet property="inputImage" destination="dhO-6G-UJW" id="cNl-Xp-QhI"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Кредит" id="efu-hf-lWD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="cNu-mf-Kek" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="cNu-mf-Kek">
                                         <rect key="frame" x="0.0" y="338" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cNu-mf-Kek" id="7D8-pb-tgC">
@@ -1468,10 +1265,13 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiJ-Zx-5pC">
                                                     <rect key="frame" x="202.5" y="8.5" width="9" height="18.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="USu-OE-ymQ">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2000000" translatesAutoresizingMaskIntoConstraints="NO" id="USu-OE-ymQ">
                                                     <rect key="frame" x="18" y="31" width="378" height="31"/>
+                                                    <connections>
+                                                        <action selector="sliderHasChanged:" destination="EIw-Q6-zaw" eventType="valueChanged" id="Ig0-ST-pon"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
@@ -1487,20 +1287,20 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Условия" id="X0Q-Ld-mZx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="gKF-9l-fnb" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="gKF-9l-fnb">
                                         <rect key="frame" x="0.0" y="466" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gKF-9l-fnb" id="owE-tm-L5W">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Срок кредитования" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgd-nG-ZJS" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Срок кредитования (в месяцах)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgd-nG-ZJS" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="15" width="374" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="G7U-8Z-swR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1538,25 +1338,21 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="tDD-K7-7oz" secondAttribute="trailing" constant="16" id="fF9-SB-YE9"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="Sgd-nG-ZJS" id="rgt-h4-uWO"/>
-                                            <outlet property="inputImage" destination="tDD-K7-7oz" id="f0b-eB-NAC"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="4LU-bB-s4j" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="4LU-bB-s4j">
                                         <rect key="frame" x="0.0" y="538" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4LU-bB-s4j" id="y7q-eb-vH5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Срок кредитования" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tir-C5-8eM" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Процентная ставка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tir-C5-8eM" customClass="HoshiTextField" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="15" width="374" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="EdL-a0-40b"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" textContentType="name"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1594,16 +1390,12 @@
                                                 <constraint firstItem="tir-C5-8eM" firstAttribute="leading" secondItem="y7q-eb-vH5" secondAttribute="leadingMargin" id="iKr-ZA-8Ge"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="inputField" destination="tir-C5-8eM" id="bB1-cJ-MQf"/>
-                                            <outlet property="inputImage" destination="3tK-8K-q7j" id="0Kk-mv-oxk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="5tL-jc-JCZ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="72" id="nVr-FJ-kfy" customClass="InputCell" customModule="VTB_HACKATHON_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="nVr-FJ-kfy">
                                         <rect key="frame" x="0.0" y="650" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nVr-FJ-kfy" id="VSa-Gf-vXP">
@@ -1641,6 +1433,16 @@
                             <outlet property="delegate" destination="EIw-Q6-zaw" id="9ij-Dz-zLU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="myF-yu-bdG"/>
+                    <connections>
+                        <outlet property="brand" destination="KuL-jh-8Nu" id="isM-W4-XR1"/>
+                        <outlet property="creditsum" destination="iiJ-Zx-5pC" id="CGa-SN-g5w"/>
+                        <outlet property="duration" destination="Sgd-nG-ZJS" id="FXn-MZ-Xpn"/>
+                        <outlet property="header" destination="k9Y-oR-dqc" id="mBB-cV-peP"/>
+                        <outlet property="interestRate" destination="tir-C5-8eM" id="5gf-cF-B7T"/>
+                        <outlet property="price" destination="oe3-Qa-chD" id="7Qy-Pg-z10"/>
+                        <outlet property="slider" destination="USu-OE-ymQ" id="GAj-KH-rpZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6g-UF-OFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1649,7 +1451,7 @@
     </scenes>
     <designables>
         <designable name="Gfq-e0-a0O">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="34.5" height="18.5"/>
         </designable>
         <designable name="KuL-jh-8Nu">
             <size key="intrinsicContentSize" width="43.5" height="18.5"/>
@@ -1658,12 +1460,9 @@
             <size key="intrinsicContentSize" width="114" height="18.5"/>
         </designable>
         <designable name="Sgd-nG-ZJS">
-            <size key="intrinsicContentSize" width="133" height="18.5"/>
+            <size key="intrinsicContentSize" width="215.5" height="18.5"/>
         </designable>
         <designable name="T0s-mU-SUE">
-            <size key="intrinsicContentSize" width="33" height="18.5"/>
-        </designable>
-        <designable name="TFz-lR-7Nn">
             <size key="intrinsicContentSize" width="33" height="18.5"/>
         </designable>
         <designable name="UNz-cK-F06">
@@ -1679,7 +1478,7 @@
             <size key="intrinsicContentSize" width="34.5" height="18.5"/>
         </designable>
         <designable name="dCo-a2-S5L">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="41" height="18.5"/>
         </designable>
         <designable name="h1z-Pt-Zab">
             <size key="intrinsicContentSize" width="26.5" height="18.5"/>
@@ -1691,10 +1490,10 @@
             <size key="intrinsicContentSize" width="73.5" height="18.5"/>
         </designable>
         <designable name="tir-C5-8eM">
-            <size key="intrinsicContentSize" width="133" height="18.5"/>
+            <size key="intrinsicContentSize" width="130.5" height="18.5"/>
         </designable>
         <designable name="wT8-Cl-PVx">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="50" height="18.5"/>
         </designable>
     </designables>
     <resources>

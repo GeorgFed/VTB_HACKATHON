@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E222532777A00619CF6 /* CreditDetailsVC.swift */; };
+		56196E262532779D00619CF6 /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E252532779D00619CF6 /* PersonalDataVC.swift */; };
+		56196E2925327CFC00619CF6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E2825327CFC00619CF6 /* Validation.swift */; };
+		56196E2E2532813300619CF6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56196E2D2532813300619CF6 /* CustomTextField.swift */; };
 		567FA5252530985A004611CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5242530985A004611CD /* AppDelegate.swift */; };
 		567FA5272530985B004611CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5262530985B004611CD /* SceneDelegate.swift */; };
 		567FA52C2530985B004611CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567FA52A2530985B004611CD /* Main.storyboard */; };
@@ -17,16 +21,12 @@
 		567FA5592531409E004611CD /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5582531409E004611CD /* PopupVC.swift */; };
 		567FA55C2531D5A0004611CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA55B2531D5A0004611CD /* User.swift */; };
 		567FA55F2531D5B7004611CD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA55E2531D5B7004611CD /* Car.swift */; };
-		567FA5622531D661004611CD /* CreditRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5612531D661004611CD /* CreditRequestVC.swift */; };
-		567FA5682531D950004611CD /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5672531D950004611CD /* InputField.swift */; };
-		567FA56D2531E043004611CD /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA56C2531E043004611CD /* InputCell.swift */; };
 		567FA5702531E06D004611CD /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA56F2531E06D004611CD /* ButtonCell.swift */; };
 		567FA5732531E0BA004611CD /* PopupVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5722531E0BA004611CD /* PopupVC+UI.swift */; };
 		567FA5822531E468004611CD /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5812531E468004611CD /* ButtonExtension.swift */; };
 		567FA5852531E6A8004611CD /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5842531E6A8004611CD /* Credential.swift */; };
 		567FA5882531ECA0004611CD /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5872531ECA0004611CD /* ImageViewExtension.swift */; };
 		567FA58F2531ED42004611CD /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA58E2531ED42004611CD /* CustomView.swift */; };
-		567FA5922531F6F5004611CD /* CreditRequestVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */; };
 		567FA5952531FBAF004611CD /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5942531FBAF004611CD /* HideKeyboard.swift */; };
 		567FA5982532201D004611CD /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA5972532201C004611CD /* SliderCell.swift */; };
 		567FA59B25326454004611CD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FA59A25326453004611CD /* ProfileVC.swift */; };
@@ -36,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56196E222532777A00619CF6 /* CreditDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailsVC.swift; sourceTree = "<group>"; };
+		56196E252532779D00619CF6 /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
+		56196E2825327CFC00619CF6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		56196E2D2532813300619CF6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		567FA5212530985A004611CD /* VTB_HACKATHON_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTB_HACKATHON_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567FA5242530985A004611CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567FA5262530985B004611CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,16 +52,12 @@
 		567FA5582531409E004611CD /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
 		567FA55B2531D5A0004611CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		567FA55E2531D5B7004611CD /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		567FA5612531D661004611CD /* CreditRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditRequestVC.swift; sourceTree = "<group>"; };
-		567FA5672531D950004611CD /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
-		567FA56C2531E043004611CD /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		567FA56F2531E06D004611CD /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		567FA5722531E0BA004611CD /* PopupVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopupVC+UI.swift"; sourceTree = "<group>"; };
 		567FA5812531E468004611CD /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		567FA5842531E6A8004611CD /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		567FA5872531ECA0004611CD /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		567FA58E2531ED42004611CD /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditRequestVC+UI.swift"; sourceTree = "<group>"; };
 		567FA5942531FBAF004611CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		567FA5972532201C004611CD /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		567FA59A25326453004611CD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 		567FA53B2530988B004611CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				567FA56C2531E043004611CD /* InputCell.swift */,
 				567FA56F2531E06D004611CD /* ButtonCell.swift */,
 				567FA5972532201C004611CD /* SliderCell.swift */,
 			);
@@ -147,12 +146,12 @@
 				567FA54D25312B87004611CD /* CameraVC.swift */,
 				567FA5582531409E004611CD /* PopupVC.swift */,
 				567FA5722531E0BA004611CD /* PopupVC+UI.swift */,
-				567FA5612531D661004611CD /* CreditRequestVC.swift */,
-				567FA5912531F6F5004611CD /* CreditRequestVC+UI.swift */,
 				567FA59A25326453004611CD /* ProfileVC.swift */,
 				567FA59D25326476004611CD /* HistoryVC.swift */,
 				567FA5A0253264C7004611CD /* SignInVC.swift */,
 				567FA5A3253264F7004611CD /* SignUpVC.swift */,
+				56196E222532777A00619CF6 /* CreditDetailsVC.swift */,
+				56196E252532779D00619CF6 /* PersonalDataVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		567FA53D253098AF004611CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				56196E2825327CFC00619CF6 /* Validation.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 		567FA54525312701004611CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				567FA5672531D950004611CD /* InputField.swift */,
 				567FA58E2531ED42004611CD /* CustomView.swift */,
 				567FA5942531FBAF004611CD /* HideKeyboard.swift */,
+				56196E2D2532813300619CF6 /* CustomTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -255,15 +255,14 @@
 			files = (
 				567FA59B25326454004611CD /* ProfileVC.swift in Sources */,
 				567FA5982532201D004611CD /* SliderCell.swift in Sources */,
-				567FA56D2531E043004611CD /* InputCell.swift in Sources */,
 				567FA58F2531ED42004611CD /* CustomView.swift in Sources */,
+				56196E2925327CFC00619CF6 /* Validation.swift in Sources */,
 				567FA5A1253264C7004611CD /* SignInVC.swift in Sources */,
+				56196E262532779D00619CF6 /* PersonalDataVC.swift in Sources */,
 				567FA5732531E0BA004611CD /* PopupVC+UI.swift in Sources */,
-				567FA5922531F6F5004611CD /* CreditRequestVC+UI.swift in Sources */,
 				567FA549253128A4004611CD /* Constants.swift in Sources */,
 				567FA59E25326476004611CD /* HistoryVC.swift in Sources */,
 				567FA5252530985A004611CD /* AppDelegate.swift in Sources */,
-				567FA5682531D950004611CD /* InputField.swift in Sources */,
 				567FA55C2531D5A0004611CD /* User.swift in Sources */,
 				567FA5272530985B004611CD /* SceneDelegate.swift in Sources */,
 				567FA5A4253264F7004611CD /* SignUpVC.swift in Sources */,
@@ -271,11 +270,12 @@
 				567FA5592531409E004611CD /* PopupVC.swift in Sources */,
 				567FA5852531E6A8004611CD /* Credential.swift in Sources */,
 				567FA55F2531D5B7004611CD /* Car.swift in Sources */,
+				56196E232532777A00619CF6 /* CreditDetailsVC.swift in Sources */,
 				567FA5702531E06D004611CD /* ButtonCell.swift in Sources */,
+				56196E2E2532813300619CF6 /* CustomTextField.swift in Sources */,
 				567FA54E25312B87004611CD /* CameraVC.swift in Sources */,
 				567FA5822531E468004611CD /* ButtonExtension.swift in Sources */,
 				567FA5952531FBAF004611CD /* HideKeyboard.swift in Sources */,
-				567FA5622531D661004611CD /* CreditRequestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

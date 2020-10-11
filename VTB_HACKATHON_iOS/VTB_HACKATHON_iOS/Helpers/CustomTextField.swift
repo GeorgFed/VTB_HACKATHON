@@ -188,7 +188,6 @@ import UIKit
     
 }
 
-
 extension String {
     /**
     true if self contains characters.
