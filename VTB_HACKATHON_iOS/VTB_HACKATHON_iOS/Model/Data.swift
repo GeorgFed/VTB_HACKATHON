@@ -54,13 +54,13 @@ struct LoginRequest: Codable {
     let password: String
 }
 
-struct RegisterRequest {
+struct RegisterRequest: Codable {
     let username: String
     let password: String
     let password_confirm: String
 }
 
-struct UserDataResponse {
+struct UserDataResponse: Codable {
     let id: Int
     let email: String
     let income_amount:Int

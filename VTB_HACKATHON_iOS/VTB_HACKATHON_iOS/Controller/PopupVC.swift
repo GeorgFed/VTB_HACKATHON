@@ -16,16 +16,26 @@ class PopupVC: UIViewController {
     @IBOutlet weak var carImage: UIImageView!
     
     var imageToProcess: UIImage?
+    var model: String?
+    var prob: Double?
+    
+    var make: String?
+    var make_model: String?
+    var minPrice: Int?
+    var maxPrice: Int?
+    var imageURL: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData() {
-            self.setupUI()
-        }
+        self.setupUI()
+        setDetails()
     }
     
-    func fetchData(handler: @escaping () -> ()) {
-        handler()
+    func setDetails() {
+        carTitle.text = make! + make_model!
+        carImage.downloaded(from: imageURL!)
+        carDetails.text = "Продается от \(minPrice!) до \(maxPrice!) рублей"
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -37,4 +47,25 @@ class PopupVC: UIViewController {
     @IBAction func toOtherBtnTapped(_ sender: Any) {
     }
     
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }

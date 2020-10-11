@@ -16,7 +16,16 @@ class CameraVC: UIViewController {
     @IBOutlet weak var messageLbl: UILabel!
     
     let cameraManager = CameraManager()
-    var image: UIImage?
+    var imageToProcess: UIImage?
+    
+    var model: String?
+    var prob: Double?
+    
+    var make: String?
+    var make_model: String?
+    var minPrice: Int?
+    var maxPrice: Int?
+    var imageURL: String?
     
     @IBAction func snapBtnTapped(_ sender: Any) {
         // didTapCameraView()
@@ -26,24 +35,76 @@ class CameraVC: UIViewController {
                     print("Failed")
                     // error handling
                 case .success(let content):
-                    self.image = content.asImage;
-                    self.performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+                    self.imageToProcess = content.asImage;
+                    self.fetchData {
+                        print("here")
+                        if self.prob! >= 0.3 {
+                            self.getCarInfo {
+                                self.showPopup()
+                            }
+                        } else {
+                            print("Unable to recognize")
+                        }
+                    }
                     print("Success")
             }
         })
 
     }
     
+    func fetchData(handler: @escaping () -> ()) {
+        // let imageData:NSData = imageToProcess!.pngData()! as NSData
+        // let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters).replacingOccurrences(of: "\n", with: "", options: .literal, range: nil)
+        imageToProcess = imageToProcess!.resized(withPercentage: 0.2)
+        let imageData = imageToProcess?.jpegData(compressionQuality: 1)
+        let imageBase64String = imageData?.base64EncodedString()
+        // print(imageBase64String!)
+        DataSource.shared.getCar(carPhotoB64: imageBase64String!) { (model, prob) in
+            self.model = model
+            self.prob = prob
+            handler()
+        }
+    }
+    
+    func getCarInfo(handler: @escaping () -> ()) {
+        guard let model = model else {
+            return
+        }
+        
+        DataSource.shared.searchCar(model: model) { (make, make_model, minPrice, maxPrice, imageURL) in
+            self.make = make
+            self.make_model = make_model
+            self.minPrice = minPrice
+            self.maxPrice = maxPrice
+            self.imageURL = imageURL
+            handler()
+        }
+    }
+    
+    func showPopup() {
+        
+        self.performSegue(withIdentifier: Identifier.toPopupVC, sender: nil)
+    }
+    
     override func viewDidLoad() {
+        
         cameraManager.addPreviewLayerToView(self.cameraView)
-        cameraManager.cameraOutputQuality = .medium
+        cameraManager.cameraOutputQuality = .high
+        cameraManager.shouldRespondToOrientationChanges = false
         cameraManager.writeFilesToPhoneLibrary = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is PopupVC {
             let vc = segue.destination as? PopupVC
-            vc!.imageToProcess = self.image
+            vc!.imageToProcess = self.imageToProcess
+            vc!.model = model
+            vc!.prob = prob
+            vc!.make = make
+            vc!.make_model = make_model
+            vc!.minPrice = minPrice
+            vc!.maxPrice = maxPrice
+            vc!.imageURL = imageURL
         }
     }
 }
@@ -139,3 +200,21 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
     }
 }
 */
+extension UIImage {
+    func resized(withPercentage percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: size.width * percentage, height: size.height * percentage)
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+    func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+}

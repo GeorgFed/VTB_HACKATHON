@@ -32,6 +32,7 @@ class PersonalDataVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         validate()
+        header.font = UIFont.title
         self.hideKeyboard()
         tagTextFields()
         name.delegate = self

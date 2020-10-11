@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Car {
-    
+struct Car: Codable {
+    let query: String!
 }

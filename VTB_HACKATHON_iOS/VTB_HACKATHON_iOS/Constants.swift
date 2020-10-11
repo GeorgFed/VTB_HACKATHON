@@ -43,7 +43,7 @@ extension UIColor {
         return UIColor.systemFill
     }
     static var button: UIColor {
-        return .systemBlue
+        return #colorLiteral(red: 0.2274509804, green: 0.5137254902, blue: 0.9450980392, alpha: 1)
     }
 }
 
@@ -53,7 +53,7 @@ extension UIFont {
         return UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.bold)
     }
     static var subtitle: UIFont {
-        return UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
+        return UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.medium)
     }
     static var body: UIFont {
         return UIFont.systemFont(ofSize: 16)

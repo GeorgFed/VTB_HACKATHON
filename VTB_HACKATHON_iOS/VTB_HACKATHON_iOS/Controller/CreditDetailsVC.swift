@@ -22,7 +22,7 @@ class CreditDetailsVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         validate()
-        
+        header.font = UIFont.title
         self.hideKeyboard()
         brand.delegate = self
         price.delegate = self

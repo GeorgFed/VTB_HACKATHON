@@ -9,8 +9,13 @@ import UIKit
 
 class HeaderCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var closeBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        title.text = "История"
+        title.font = UIFont.title
         // Initialization code
     }
 
@@ -20,4 +25,7 @@ class HeaderCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func close() {
+        
+    }
 }

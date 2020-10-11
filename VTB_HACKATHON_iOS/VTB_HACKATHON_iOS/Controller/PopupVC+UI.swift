@@ -11,7 +11,6 @@ extension PopupVC {
     func setupUI() {
         self.carImage.roundCorners(UIRectCorner.allCorners, radius: 24)
         toCreditBtn.backgroundColor = UIColor.button
-        toOtherBtn.tintColor = UIColor.button
         carTitle.font = UIFont.title
         carDetails.font = UIFont.subtitle
         carDetails.textColor = UIColor.systemGray
